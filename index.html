@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Something Special for Nidhu ❤️</title>
+    <meta name="description" content="A birthday surprise crafted with love.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ============================================================ -->
+    <!--  STAGE 1 — Countdown / Teaser                                -->
+    <!-- ============================================================ -->
+    <section id="stage1" class="stage active">
+        <canvas id="hearts-canvas"></canvas>
+        <div class="stage1-content">
+            <div class="sparkle-wrapper">
+                <h1 class="script-headline">Something is waiting for you...</h1>
+            </div>
+            <div id="countdown" class="countdown-grid">
+                <div class="countdown-unit">
+                    <span id="cd-days" class="countdown-number">00</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-unit">
+                    <span id="cd-hours" class="countdown-number">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-unit">
+                    <span id="cd-minutes" class="countdown-number">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-unit">
+                    <span id="cd-seconds" class="countdown-number">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+            <p class="subtext">A little surprise, just for you 🎁</p>
+            <button id="btn-open-surprise" class="cta-button disabled" disabled>
+                <span class="btn-text">Open your surprise</span>
+                <span class="btn-arrow">→</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!--  STAGE 2 — Video Reveal                                      -->
+    <!-- ============================================================ -->
+    <section id="stage2" class="stage">
+        <!-- Pre-video instruction -->
+        <div id="video-intro" class="video-intro">
+            <div class="video-intro-content">
+                <p class="video-instruction-line">🔇 Turn on your sound.</p>
+                <p class="video-instruction-line delay-1">💡 Turn off the lights.</p>
+                <button id="btn-ready" class="cta-button cta-cinematic delay-2">Ready?</button>
+            </div>
+        </div>
+
+        <!-- Video player area -->
+        <div id="video-area" class="video-area hidden">
+            <video id="story-video" playsinline>
+                <!-- Video file -->
+                <source src="Untitled design (1).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button id="btn-mute" class="mute-button" aria-label="Toggle mute">
+                <svg id="icon-unmuted" class="mute-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                </svg>
+                <svg id="icon-muted" class="mute-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <line x1="23" y1="9" x2="17" y2="15"></line>
+                    <line x1="17" y1="9" x2="23" y2="15"></line>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Post-video message -->
+        <div id="video-end" class="video-end hidden">
+            <h2 class="video-end-title">Happy Birthday, Nidhu ❤️</h2>
+            <p class="video-end-line">Here's to many more chapters together.</p>
+            <button id="btn-continue" class="cta-button cta-cinematic">Continue to your surprise →</button>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!--  STAGE 3 — The Full Birthday Site                            -->
+    <!-- ============================================================ -->
+    <section id="stage3" class="stage">
+
+        <!-- Hero -->
+        <div class="s3-hero">
+            <div class="gingham-overlay"></div>
+            <div class="s3-hero-content">
+                <h1 class="s3-hero-title">Happy Birthday, Nidhu! 🎂</h1>
+                <p class="s3-hero-subtitle">Today is all about you — my favorite person in the entire universe.</p>
+            </div>
+        </div>
+
+        <!-- 3.1 Gift Boxes -->
+        <div class="s3-section" id="gift-boxes">
+            <h2 class="section-title">Your Gifts</h2>
+            <p class="section-subtitle">Click each box to unwrap a message 🎁</p>
+            <div class="gift-grid">
+                <div class="gift-box" id="gift-1" data-message="You make every ordinary day feel magical. I never knew mornings could be this beautiful until I started waking up thinking of you.">
+                    <div class="gift-box-front">
+                        <span class="gift-emoji">🎁</span>
+                        <span class="gift-label">Gift #1</span>
+                    </div>
+                    <div class="gift-box-back">
+                        <p class="gift-message"></p>
+                    </div>
+                </div>
+                <div class="gift-box" id="gift-2" data-message="Every moment with you feels like a page from the most beautiful love story ever written. You're my favorite chapter.">
+                    <div class="gift-box-front">
+                        <span class="gift-emoji">🎁</span>
+                        <span class="gift-label">Gift #2</span>
+                    </div>
+                    <div class="gift-box-back">
+                        <p class="gift-message"></p>
+                    </div>
+                </div>
+                <div class="gift-box" id="gift-3" data-message="If I could give you one thing in life, I would give you the ability to see yourself through my eyes. Only then would you realize how special you are to me.">
+                    <div class="gift-box-front">
+                        <span class="gift-emoji">🎁</span>
+                        <span class="gift-label">Gift #3</span>
+                    </div>
+                    <div class="gift-box-back">
+                        <p class="gift-message"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3.2 Best Girlfriend Award -->
+        <div class="s3-section" id="award-section">
+            <div class="certificate">
+                <div class="cert-border">
+                    <div class="cert-inner">
+                        <div class="cert-seal">★</div>
+                        <h2 class="cert-title">Certificate of Excellence</h2>
+                        <div class="cert-divider"></div>
+                        <p class="cert-subtitle">This is to certify that</p>
+                        <h3 class="cert-name">Nidhu Bache</h3>
+                        <p class="cert-body">is hereby awarded the prestigious title of</p>
+                        <h2 class="cert-award">🏆 Best Girlfriend in the Universe 🏆</h2>
+                        <p class="cert-body">For exceptional performance in being adorable, supportive, kind, funny, and absolutely irreplaceable.</p>
+                        <div class="cert-divider"></div>
+                        <p class="cert-date">Issued with love, August 31, 2026</p>
+                        <p class="cert-signature">— Your Biggest Fan ❤️</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3.3 Reasons I Love You -->
+        <div class="s3-section" id="reasons-section">
+            <h2 class="section-title">Reasons I Love You</h2>
+            <p class="section-subtitle">Tap shuffle for another reason ❤️</p>
+            <div class="reason-card">
+                <p id="reason-text" class="reason-text">"Click shuffle to discover a reason!"</p>
+            </div>
+            <button id="btn-shuffle" class="cta-button">Shuffle ♡</button>
+        </div>
+
+        <!-- 3.4 Roast & Toast Flip Cards -->
+        <div class="s3-section" id="roast-toast-section">
+            <h2 class="section-title">Roast & Toast</h2>
+            <p class="section-subtitle">Hover or tap to flip — front is a roast, back is the truth 🔥❤️</p>
+            <div class="flip-grid">
+                <div class="flip-card" id="flip-1">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front roast">
+                            <p>You steal ALL the blankets. Like, every single one. 🥶</p>
+                        </div>
+                        <div class="flip-card-back toast">
+                            <p>But I'd be cold every night if it meant you were warm. ❤️</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card" id="flip-2">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front roast">
+                            <p>Your "5 more minutes" is basically an hour. ⏰</p>
+                        </div>
+                        <div class="flip-card-back toast">
+                            <p>But waiting for you is always worth it. Every single time. 💕</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card" id="flip-3">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front roast">
+                            <p>You take 400 selfies to pick ONE photo. 📸</p>
+                        </div>
+                        <div class="flip-card-back toast">
+                            <p>And honestly? You look perfect in every single one. 😍</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card" id="flip-4">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front roast">
+                            <p>You say "I'm not hungry" then eat half my food. 🍕</p>
+                        </div>
+                        <div class="flip-card-back toast">
+                            <p>But sharing everything with you is my favorite thing. 🥰</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3.5 Photo Collage — Written in the Clouds -->
+        <div class="s3-section" id="photo-section">
+            <h2 class="section-title cloud-title">Written in the Clouds</h2>
+            <p class="section-subtitle">Our love story, floating among the stars ☁️✨</p>
+            <div class="cloud-text-wrapper">
+                <div class="cloud-shape">
+                    <span class="cloud-message">Nidhu & Me — Forever ❤️</span>
+                </div>
+            </div>
+            <div class="polaroid-grid">
+                <div class="polaroid" style="--rotate: -3deg;">
+                    <div class="polaroid-img"><img src="IMG20241201131920.jpg" alt="Our beginning"></div>
+                    <p class="polaroid-caption">Our beginning ❤️</p>
+                </div>
+                <div class="polaroid" style="--rotate: 2deg;">
+                    <div class="polaroid-img"><img src="IMG20250117190228.jpg" alt="Our moment"></div>
+                    <p class="polaroid-caption">Our moment ❤️</p>
+                </div>
+                <div class="polaroid" style="--rotate: -1deg;">
+                    <div class="polaroid-img"><img src="IMG20250413194155.jpg" alt="Together"></div>
+                    <p class="polaroid-caption">Together ❤️</p>
+                </div>
+                <div class="polaroid" style="--rotate: 3deg;">
+                    <div class="polaroid-img"><img src="IMG20250831132704.jpg" alt="Special day"></div>
+                    <p class="polaroid-caption">Special day ❤️</p>
+                </div>
+                <div class="polaroid" style="--rotate: -2deg;">
+                    <div class="polaroid-img"><img src="IMG20260411190759.jpg" alt="You and me"></div>
+                    <p class="polaroid-caption">You & me ❤️</p>
+                </div>
+                <div class="polaroid" style="--rotate: 1.5deg;">
+                    <div class="polaroid-img"><img src="IMG20260505144213.jpg" alt="Adventure"></div>
+                    <p class="polaroid-caption">Our adventure ❤️</p>
+                </div>
+                <div class="polaroid" style="--rotate: -1.5deg;">
+                    <div class="polaroid-img"><img src="Snapchat-1060390357.jpg" alt="Fun times"></div>
+                    <p class="polaroid-caption">Best day ever ❤️</p>
+                </div>
+                <div class="polaroid" style="--rotate: 2.5deg;">
+                    <div class="polaroid-img"><img src="Snapchat-112289803.jpg" alt="Forever"></div>
+                    <p class="polaroid-caption">Forever ❤️</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3.6 Love Letter -->
+        <div class="s3-section" id="love-letter-section">
+            <div class="love-letter">
+                <h2 class="letter-title">A Letter for You</h2>
+                <div class="letter-body">
+                    <p class="letter-line reveal-line">Dear Nidhu,</p>
+                    <p class="letter-line reveal-line">On your birthday, I just want you to know how grateful I am that you exist.</p>
+                    <p class="letter-line reveal-line">You're the person who makes me laugh until my stomach hurts, the one who makes bad days feel okay, and the one I want to tell everything to — the big stuff and the tiny stuff.</p>
+                    <p class="letter-line reveal-line">You make the world softer and brighter just by being in it.</p>
+                    <p class="letter-line reveal-line">I don't say it enough, but you're genuinely the most incredible person I know. Your kindness, your humor, your stubborn cuteness — I love all of it.</p>
+                    <p class="letter-line reveal-line">Here's to another year of us being us — chaotic, happy, and full of love.</p>
+                    <p class="letter-line reveal-line">Happy birthday, my love. You deserve all the magic in the world. 🌙✨</p>
+                    <p class="letter-sign reveal-line">Forever yours ❤️</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="s3-footer" id="site-footer">
+            <div class="footer-hearts" id="footer-hearts-trigger">
+                <p>Made with all my ❤️ for the birthday girl</p>
+                <p class="footer-tiny">© Our Story, 2026</p>
+            </div>
+            <!-- Easter egg: triple-click the footer text -->
+            <div id="easter-egg" class="easter-egg hidden">
+                <p class="easter-msg">🥚 You found the secret! You're the best easter egg hunter AND the best girlfriend. Double win. 🏆</p>
+            </div>
+        </footer>
+
+        <!-- Floating controls -->
+        <div class="floating-controls">
+            <button id="btn-music" class="float-btn" aria-label="Toggle music">🎵</button>
+            <button id="btn-rain-hearts" class="float-btn" aria-label="Rain hearts">💕</button>
+        </div>
+
+        <!-- Heart rain canvas for Stage 3 -->
+        <canvas id="heart-rain-canvas"></canvas>
+
+    </section>
+
+    <!-- Background music (loop, initially paused) -->
+    <audio id="bg-music" loop preload="none">
+        <source src="the_mountain-happy-birthday-576570.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
