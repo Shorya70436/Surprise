@@ -9,7 +9,7 @@
     // ──────────────────────────────────────────────────
     //  Config
     // ──────────────────────────────────────────────────
-    const BIRTHDAY = new Date(Date.now() + 15 * 1000); // 15-second countdown
+    const BIRTHDAY = new Date('2026-08-31T00:00:00'); // August 31, 2026 midnight
 
     const REASONS = [
         "Your laugh is my favorite sound in the world.",
